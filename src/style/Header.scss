@@ -1,0 +1,18 @@
+.header {
+    align-items: center;
+    .navBarUl {
+        list-style: none;
+        width: 220px;
+    }
+    .navBarUl a {
+        color: var(--black);
+        text-decoration: none;
+    }
+    .navBarUl a.active {
+        border-bottom: 1px solid var(--black);
+    }
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}

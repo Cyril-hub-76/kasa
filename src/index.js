@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "../src/style/index.scss";
+import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
-// import App from './components/App';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Error from "./components/pages/Error";
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Footer />
+    <Router>
+      <div className='containerSize'>
+        <Header />
+          <main className='mainSize'>
+            <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="*" element={<Error />} />
+            </Routes>
+          </main>
+        <Footer />
+      </div>
+    </Router>
   </React.StrictMode>
 );
 

@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*colors*/
@@ -10,3 +12,11 @@
   --white: #fff;
 }
 /*colors*/
+.mainSize {
+  max-width: 1240px;
+  margin: 30px auto;
+}
+.containerSize {
+  max-width: 1440px;
+  margin: auto;
+}
