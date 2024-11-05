@@ -1,11 +1,26 @@
+import bannerCover from "../../assets/Pictures/backgroundBannerHome.webp"
+import { datas } from "../../datas/Datas";
+import "../../style/Home.scss";
+
+import Banner from "../Banner";
+import Card from "../Card";
 export default function Home () {
     return (
-        <div>
-            <h1>Et accusantium earum nam nihil iure? </h1><p>Lorem ipsum dolor sit amet. Non nulla facilisEt delectus id quia inventore sit itaque quidem! Et ipsa alias sed odio necessitatibus <strong>Eos dolorum sed vitae quia vel sint rerum et vitae quae</strong>. Eos nihil harum cum consequuntur beatae <em>Et rerum aut dolor dolore ea nemo dolorem sit harum illum</em>. </p><blockquote cite="https://www.loremipzum.com">Hic suscipit sapiente quo dolorem mollitia qui sunt totam vel voluptatum distinctio et distinctio galisum non sunt praesentium. </blockquote><h2>Qui dolor nobis eos harum accusamus! </h2><p>Eum suscipit nulla <em>Aut magnam id ipsum omnis qui dolores suscipit</em>. Aut architecto quisquam et voluptatem fugiatAb eveniet ea voluptatem fuga sed totam facere sed sint eaque. Aut libero quibusdam vel doloribus Quis <strong>Quo nulla</strong>. </p><h3>Qui rerum debitis ea illum fugiat. </h3><p>Eum animi tenetur <strong>Et minus ut deleniti consequatur ut alias ipsam</strong> ab autem voluptate. Id illum internos <em>Est similique</em> qui voluptatum officiis aut voluptatem excepturi. </p>
-            <h1>Et accusantium earum nam nihil iure? </h1><p>Lorem ipsum dolor sit amet. Non nulla facilisEt delectus id quia inventore sit itaque quidem! Et ipsa alias sed odio necessitatibus <strong>Eos dolorum sed vitae quia vel sint rerum et vitae quae</strong>. Eos nihil harum cum consequuntur beatae <em>Et rerum aut dolor dolore ea nemo dolorem sit harum illum</em>. </p><blockquote cite="https://www.loremipzum.com">Hic suscipit sapiente quo dolorem mollitia qui sunt totam vel voluptatum distinctio et distinctio galisum non sunt praesentium. </blockquote><h2>Qui dolor nobis eos harum accusamus! </h2><p>Eum suscipit nulla <em>Aut magnam id ipsum omnis qui dolores suscipit</em>. Aut architecto quisquam et voluptatem fugiatAb eveniet ea voluptatem fuga sed totam facere sed sint eaque. Aut libero quibusdam vel doloribus Quis <strong>Quo nulla</strong>. </p><h3>Qui rerum debitis ea illum fugiat. </h3><p>Eum animi tenetur <strong>Et minus ut deleniti consequatur ut alias ipsam</strong> ab autem voluptate. Id illum internos <em>Est similique</em> qui voluptatum officiis aut voluptatem excepturi. </p>
-            <h1>Et accusantium earum nam nihil iure? </h1><p>Lorem ipsum dolor sit amet. Non nulla facilisEt delectus id quia inventore sit itaque quidem! Et ipsa alias sed odio necessitatibus <strong>Eos dolorum sed vitae quia vel sint rerum et vitae quae</strong>. Eos nihil harum cum consequuntur beatae <em>Et rerum aut dolor dolore ea nemo dolorem sit harum illum</em>. </p><blockquote cite="https://www.loremipzum.com">Hic suscipit sapiente quo dolorem mollitia qui sunt totam vel voluptatum distinctio et distinctio galisum non sunt praesentium. </blockquote><h2>Qui dolor nobis eos harum accusamus! </h2><p>Eum suscipit nulla <em>Aut magnam id ipsum omnis qui dolores suscipit</em>. Aut architecto quisquam et voluptatem fugiatAb eveniet ea voluptatem fuga sed totam facere sed sint eaque. Aut libero quibusdam vel doloribus Quis <strong>Quo nulla</strong>. </p><h3>Qui rerum debitis ea illum fugiat. </h3><p>Eum animi tenetur <strong>Et minus ut deleniti consequatur ut alias ipsam</strong> ab autem voluptate. Id illum internos <em>Est similique</em> qui voluptatum officiis aut voluptatem excepturi. </p>
-            <h1>Et accusantium earum nam nihil iure? </h1><p>Lorem ipsum dolor sit amet. Non nulla facilisEt delectus id quia inventore sit itaque quidem! Et ipsa alias sed odio necessitatibus <strong>Eos dolorum sed vitae quia vel sint rerum et vitae quae</strong>. Eos nihil harum cum consequuntur beatae <em>Et rerum aut dolor dolore ea nemo dolorem sit harum illum</em>. </p><blockquote cite="https://www.loremipzum.com">Hic suscipit sapiente quo dolorem mollitia qui sunt totam vel voluptatum distinctio et distinctio galisum non sunt praesentium. </blockquote><h2>Qui dolor nobis eos harum accusamus! </h2><p>Eum suscipit nulla <em>Aut magnam id ipsum omnis qui dolores suscipit</em>. Aut architecto quisquam et voluptatem fugiatAb eveniet ea voluptatem fuga sed totam facere sed sint eaque. Aut libero quibusdam vel doloribus Quis <strong>Quo nulla</strong>. </p><h3>Qui rerum debitis ea illum fugiat. </h3><p>Eum animi tenetur <strong>Et minus ut deleniti consequatur ut alias ipsam</strong> ab autem voluptate. Id illum internos <em>Est similique</em> qui voluptatum officiis aut voluptatem excepturi. </p>
+        <>
+            <Banner imgUrl={bannerCover}>
+                <h2>Chez vous, partout et ailleurs</h2>
+            </Banner >
+            <div className="grid">
+                {datas.map(({id, title, cover})=>(
+                    <Card
+                        key = {id}
+                        id = {id.toString()}
+                        title = {title}
+                        cover = {cover}
+                    />
+                ))}
 
-        </div>
+            </div>
+        </>
     )
 }

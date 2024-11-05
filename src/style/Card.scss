@@ -1,0 +1,28 @@
+.square {
+    width: 340px;
+    height: 340px;
+    border-radius: 12px;
+}
+
+.card {
+    position: relative;
+    color: #fff;
+    img {
+        object-fit: cover;
+    }
+    h3 {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 16px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        background: rgba(0, 0, 0, 0.4);
+        width: 340px;
+        height: 340px;
+        border-radius: 12px;
+    }
+}

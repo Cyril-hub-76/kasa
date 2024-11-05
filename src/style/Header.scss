@@ -16,3 +16,18 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 526px){
+    .header {
+        img {
+            width: 140px;
+        }
+        .navBarUl {
+            width: 180px;
+            
+        }
+        .navBarUl li a{
+            font-size: 21px;
+        }
+    }
+}
