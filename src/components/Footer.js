@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="footer">
         <div className="footer footerDiv">
             <img src={logoKasa} alt="Logo pied de page"/>
-            <p>&copy; {year} Kasa. All rights reserved</p>
+            <p><span>&copy; {year} Kasa.</span> <span>All rights reserved</span></p>
         </div>
     </footer>
     )

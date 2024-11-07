@@ -1,11 +1,9 @@
-@use "../style/index.scss";
-
 footer {
     height: 210px;
     padding: 15px;
     flex-direction: column-reverse;
-    color: var(--white);
-    background: var(--black);
+    color: #fff;
+    background: #000;
 }
 
 .footerDiv {
@@ -18,4 +16,16 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        justify-content: center;
+    }
+    .footer .footerDiv p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
 }

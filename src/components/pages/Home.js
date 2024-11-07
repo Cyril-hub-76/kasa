@@ -8,7 +8,7 @@ export default function Home () {
     return (
         <>
             <Banner imgUrl={bannerCover}>
-                <h2>Chez vous, partout et ailleurs</h2>
+                <h2><span>Chez vous,</span> <span>partout et ailleurs</span></h2>
             </Banner >
             <div className="grid">
                 {datas.map(({id, title, cover})=>(
