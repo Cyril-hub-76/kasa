@@ -7,11 +7,11 @@
 }
 
 /*colors*/
-:root {
-  --black: #000;
-  --white: #fff;
-}
+$corail: #FF6060;
+$white: white;
+$lightGrey: #f6f6f6;
 /*colors*/
+
 .mainSize {
   max-width: 1240px;
   margin: 30px auto;
@@ -23,8 +23,3 @@
 header, main {
   padding: 0 20px;
 }
-// @media (max-width: 425px) {
-//   .containerSize {
-//     padding: 20px;
-//   }
-// }
