@@ -1,0 +1,50 @@
+@import "../style//index.scss";
+
+$topBarCollapseWidth: 100%;
+$topBarCollapseHeigth: 40px;
+$radius: 5px;
+$padding: 10px;
+$margin: 15px;
+$transitionCollpase: .4s;
+$transitionRotate: .4s;
+
+.container {
+    margin: 15px 0;
+    max-height: $topBarCollapseHeigth;
+    transition: $transitionCollpase;
+    overflow: hidden;
+}
+.topBarCollapse{
+    width: $topBarCollapseWidth;
+    height: $topBarCollapseHeigth;
+    border-radius: $radius;
+    padding: $padding;
+    background: $corail;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        cursor: pointer;
+    }
+}
+
+p.content {
+    background: $lightGrey;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.active {
+    max-height: 300px;
+    overflow: hidden;
+    transition: $transitionCollpase;
+}
+.down {
+    transform: rotate(-180deg);
+    transition: $transitionRotate;
+}
+.up {
+    transform: rotate(0deg);
+    transition: $transitionRotate;
+}
