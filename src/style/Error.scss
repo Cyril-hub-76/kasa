@@ -1,0 +1,49 @@
+@import "../style/index.scss";
+
+.errorContainer {
+    width: 100%;
+    margin: auto;
+    min-height: calc(100vh - 368px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1, p {
+        color: $corail;
+    }
+    h1{
+        font-size: 7em;
+    }
+    p {
+        font-size: 36px;
+        padding: 50px 0;
+        text-align: center;
+    }
+    a {
+        font-size: 18px;
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+    .errorContainer {
+
+        h1{
+            font-size: 96px;
+        }
+        p{
+            font-size: 18px;
+            padding: 110px 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 526px) {
+    .errorContainer {
+        p {
+            padding: 128px 0;
+        }
+    }
+}
