@@ -1,5 +1,6 @@
 import bannerCover from "../../assets/Pictures/backgroundBannerHome.webp"
 import { datas } from "../../datas/Datas";
+import { Link } from "react-router-dom";
 import "../../style/Home.scss";
 
 import Banner from "../Banner";
@@ -12,12 +13,14 @@ export default function Home () {
             </Banner >
             <div className="grid">
                 {datas.map(({id, title, cover})=>(
-                    <Card
-                        key = {id}
-                        id = {id.toString()}
-                        title = {title}
-                        cover = {cover}
-                    />
+                    <Link key={id} to={`/logements/${id}`}>
+                        <Card
+                            key = {id}
+                            id = {id.toString()}
+                            title = {title}
+                            cover = {cover}
+                        />
+                    </Link>
                 ))}
 
             </div>

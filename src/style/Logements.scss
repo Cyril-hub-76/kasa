@@ -1,0 +1,106 @@
+@import "../style//index.scss";
+
+.imgContainer img {
+    width: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.flexToColumnContainer {
+    margin-top: 25px;
+    .containerLeft {
+        h2 {
+            color: $corail;
+            font-size: 24px;
+            font-weight: 100;
+        }
+        span.location {
+            display: block;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        .tagDiv {
+            display: flex;
+            span {
+                background: $corail;
+                color: $white;
+                font-size: 15px;
+                padding: 5px 12px;
+                border-radius: 25px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .containerRight {
+
+        .hostContainer{
+            
+            width: 200px;
+            align-items: center;
+            h3{
+                text-align: right;
+                margin: 0 15px 0 35px;
+                color: $corail;
+                font-size: 18px;
+                font-weight: 100;
+            }
+            img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+        }
+        .rateDiv {
+            text-align: right;
+            .stars {
+                width: 30px;
+            }
+        }
+    }
+    
+}
+.dropdownContainer {
+    margin-top: 25px;
+    .container, .active {
+        margin: unset;
+        width: 48%;
+    }
+}
+
+@media (max-width: 601px) {
+    .containerRight {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .flexToColumnContainer {
+        flex-direction: column;
+    }
+    .dropdownContainer {
+        flex-direction: column;
+        .container,.active {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media (max-width: 397px) {
+    .tagDiv {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            margin-bottom: 10px;
+        }
+    }
+    .containerRight {
+        .rateDiv {
+            .stars {
+                width: 18px !important;
+            }
+        }
+        
+    }
+}
