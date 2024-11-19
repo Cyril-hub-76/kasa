@@ -1,10 +1,10 @@
 import "../../style/Logements.scss";
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { datas } from "../../datas/Datas";
-import imgTemp from "../../assets/Pictures/tempImg.svg";
 import starActive from "../../assets/icon/star-active.svg";
 import starInactive from "../../assets/icon/star-inactive.svg";
 import Collapse from "../../components/Collapse";
+import Slider from "../../components/Slider";
 export default function Logements () {
 
     const {id} = useParams();
@@ -12,12 +12,15 @@ export default function Logements () {
     const name = logement.host.name;
     const range = [0,1,2,3,4];
     const value = Number(logement.rating);
-    
+    const title = logement.title
+    const pictures = logement.pictures;
+
     return logement && (
         <div className = {`container_${logement.id}`}>
-            <div className="imgContainer">
-                <img src={imgTemp} alt="" />
-            </div>
+            <Slider
+                pics = {pictures}
+                title = {title}
+            />
             <div className="dataLogementContainer">
                 <div className="flexToColumnContainer flex">
                     <div className="containerLeft">
@@ -57,5 +60,5 @@ export default function Logements () {
                 </div>
             </div>
         </div>
-    )
+    ) 
 }
