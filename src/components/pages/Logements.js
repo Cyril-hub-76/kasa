@@ -1,5 +1,5 @@
 import "../../style/Logements.scss";
-import { useParams} from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { datas } from "../../datas/Datas";
 import starActive from "../../assets/icon/star-active.svg";
 import starInactive from "../../assets/icon/star-inactive.svg";
@@ -9,6 +9,9 @@ export default function Logements () {
 
     const {id} = useParams();
     const logement = datas.find((item)=> item.id === id);
+    if(!logement){
+        return <Navigate to ="/Error.js" />;
+    }
     const name = logement.host.name;
     const range = [0,1,2,3,4];
     const value = Number(logement.rating);
