@@ -1,17 +1,26 @@
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
-}
-
 /*colors*/
 $corail: #FF6060;
 $white: white;
 $lightGrey: #f6f6f6;
+$black: #000;
 /*colors*/
 
+/*font sizes*/
+$big: 40px;
+$medium: 24px;
+$small: 18px;
+/*font sizes*/
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: $small;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background: $white;
+}
 .mainSize {
   max-width: 1240px;
   margin: 30px auto;

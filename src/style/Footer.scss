@@ -1,9 +1,10 @@
+@import "../style/index.scss";
 footer {
     height: 210px;
     padding: 15px;
     flex-direction: column-reverse;
-    color: #fff;
-    background: #000;
+    color: $white;
+    background: $black;
 }
 
 .footerDiv {

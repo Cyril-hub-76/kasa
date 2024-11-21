@@ -1,3 +1,4 @@
+@import "../style/index.scss";
 $width: 340px;
 $height: 340px;
 $radius: 12px;
@@ -9,7 +10,7 @@ $radius: 12px;
 
 .card {
     position: relative;
-    color: #fff;
+    color: $white;
     img {
         object-fit: cover;
     }
@@ -17,7 +18,7 @@ $radius: 12px;
         position: absolute;
         bottom: 15px;
         left: 15px;
-        font-size: 16px;
+        font-size: $small;
         width: 180px;
     }
     &::before {

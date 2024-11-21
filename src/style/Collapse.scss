@@ -1,4 +1,4 @@
-@import "../style//index.scss";
+@import "../style/index.scss";
 
 $topBarCollapseWidth: 100%;
 $topBarCollapseHeigth: 40px;
@@ -36,7 +36,7 @@ p.content {
 }
 
 .active {
-    max-height: 300px;
+    max-height: 500px;
     overflow: hidden;
     transition: $transitionCollpase;
 }
