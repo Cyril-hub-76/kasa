@@ -5,8 +5,8 @@ $topBarCollapseHeigth: 40px;
 $radius: 5px;
 $padding: 10px;
 $margin: 15px;
-$transitionCollpase: .4s;
-$transitionRotate: .4s;
+$transitionCollpase: .5s;
+$transitionRotate: .5s;
 
 .container {
     margin: 15px 0;
@@ -32,13 +32,13 @@ $transitionRotate: .4s;
 p.content {
     background: $lightGrey;
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 .active {
     max-height: 500px;
     overflow: hidden;
     transition: $transitionCollpase;
+    margin-bottom: 15px;
 }
 .down {
     transform: rotate(-180deg);
