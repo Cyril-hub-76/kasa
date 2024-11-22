@@ -1,4 +1,4 @@
-import "../../style/Error.scss";
+import "../style/Error.scss";
 export default function Error () {
     return (
         <div className="errorContainer">

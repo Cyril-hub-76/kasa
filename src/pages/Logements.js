@@ -1,10 +1,10 @@
-import "../../style/Logements.scss";
+import "../style/Logements.scss";
 import { useParams, Navigate } from "react-router-dom";
-import { datas } from "../../datas/Datas";
-import starActive from "../../assets/icon/star-active.svg";
-import starInactive from "../../assets/icon/star-inactive.svg";
-import Collapse from "../../components/Collapse";
-import Slider from "../../components/Slider";
+import { datas } from "../datas/Datas";
+import starActive from "../assets/icon/star-active.svg";
+import starInactive from "../assets/icon/star-inactive.svg";
+import Collapse from "../components/Collapse";
+import Slider from "../components/Slider";
 export default function Logements () {
 
     const {id} = useParams();

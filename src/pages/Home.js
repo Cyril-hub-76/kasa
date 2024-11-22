@@ -1,10 +1,10 @@
-import bannerCover from "../../assets/Pictures/backgroundBannerHome.webp"
-import { datas } from "../../datas/Datas";
+import bannerCover from "../assets/Pictures/backgroundBannerHome.webp"
+import { datas } from "../datas/Datas.js";
 import { Link } from "react-router-dom";
-import "../../style/Home.scss";
+import "../style/Home.scss";
 
-import Banner from "../Banner";
-import Card from "../Card";
+import Banner from "../components/Banner.js";
+import Card from "../components/Card.js";
 export default function Home () {
     return (
         <>

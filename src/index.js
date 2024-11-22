@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "../src/style/index.scss";
-import Header from "../src/components/Header";
-import Footer from "../src/components/Footer";
-import Logements from "./components/pages/Logements"
-
+import "./style/index.scss";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import Logements from "./pages/Logements.js";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Error from "./components/pages/Error";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+import Error from "./pages/Error.js";
 import reportWebVitals from './reportWebVitals';
 
 
