@@ -35,7 +35,7 @@ p.content {
 }
 
 .active {
-    max-height: 500px;
+    max-height: 100vh;
     overflow: hidden;
     transition: $transitionCollpase;
     margin-bottom: 15px;

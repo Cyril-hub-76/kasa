@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Header () {
     return (
         <header className="header flex mainSize">
-            <img src={logoHeader} alt="Logo Kasa de l'entête" />
+            <h1><img src={logoHeader} alt="Logo du site Kasa" /></h1>
             <nav>
                 <ul className="navBarUl flex">
                     <li>
