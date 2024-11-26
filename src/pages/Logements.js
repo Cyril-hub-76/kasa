@@ -30,8 +30,8 @@ export default function Logements () {
                         <h2>{logement.title}</h2>
                         <span className="location">{logement.location}</span>
                         <div className="tagDiv">
-                            {logement.tags.map((tag, index)=>(
-                               <span key={index}>{tag}</span> 
+                            {logement.tags.map((tag)=>(
+                               <span key={tag.id}>{tag}</span> 
                             ))}
                         </div>
                     </div> 
@@ -56,8 +56,8 @@ export default function Logements () {
                     />  
                     <Collapse 
                         title= "Équipements"
-                        content={logement.equipments.map((equipment, index) =>(
-                            <li style={{listStyle: "none"}} key={index}>{equipment}</li>
+                        content={logement.equipments.map((equipment) =>(
+                            <li style={{listStyle: "none"}} key={equipment.id}>{equipment}</li>
                         ))}
                     /> 
                 </div>
