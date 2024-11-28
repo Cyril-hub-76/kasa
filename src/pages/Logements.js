@@ -28,10 +28,10 @@ export default function Logements () {
                 <div className="flexToColumnContainer flex">
                     <div className="containerLeft">
                         <h2>{logement.title}</h2>
-                        <span className="location">{logement.location}</span>
+                        <span key={logement.id} className="location">{logement.location}</span>
                         <div className="tagDiv">
                             {logement.tags.map((tag)=>(
-                               <span key={tag.id}>{tag}</span> 
+                               <span key={tag}>{tag}</span> 
                             ))}
                         </div>
                     </div> 
@@ -42,8 +42,8 @@ export default function Logements () {
                         </div>
                         <div className="rateDiv">
                             {
-                                range.map((a, index) => (
-                                    <span key={index}>{a < value ?  <img className="stars" src={starActive} alt="Étoiles actives" /> : <img className="stars" src={starInactive} alt="Étoiles inactives" />}</span>
+                                range.map((val, index) => (
+                                    <span key={index}>{val < value ?  <img className="stars" src={starActive} alt="Étoiles actives" /> : <img className="stars" src={starInactive} alt="Étoiles inactives" />}</span>
                                 ))
                             }
                         </div>
@@ -55,9 +55,10 @@ export default function Logements () {
                         content={logement.description}
                     />  
                     <Collapse 
+                        id = {logement.id}
                         title= "Équipements"
-                        content={logement.equipments.map((equipment) =>(
-                            <li style={{listStyle: "none"}} key={equipment.id}>{equipment}</li>
+                        content={logement.equipments.map((equipment, index) =>(
+                            <li style={{listStyle: "none"}} key={index}>{equipment}</li>
                         ))}
                     /> 
                 </div>
