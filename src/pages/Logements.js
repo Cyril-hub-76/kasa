@@ -51,6 +51,7 @@ export default function Logements () {
                 </div>
                 <div className="dropdownContainer flex">
                     <Collapse 
+                        id = {logement.id}
                         title = "Description"
                         content={logement.description}
                     />  
