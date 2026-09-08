@@ -1,0 +1,21 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    # Security fixes only: do not open routine version-update PRs.
+    open-pull-requests-limit: 0
+
+    # Group only non-breaking security updates together.
+    # Major security updates remain outside this group so they can be reviewed separately.
+    groups:
+      security-patch-minor:
+        applies-to: security-updates
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
